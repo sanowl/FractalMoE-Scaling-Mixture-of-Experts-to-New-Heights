@@ -1,0 +1,62 @@
+
+# FractalMoE: Scaling Mixture of Experts to New Heights
+
+## Project Overview
+
+FractalMoE is an innovative extension of the Mixture of Experts (MoE) architecture, specifically inspired by and building upon the "Mixture of A Million Experts" concept. This project introduces novel techniques to push the boundaries of scalability and efficiency in large language models.
+
+## Key Innovations
+
+1. **Fractal Expert Structure**: Each expert in FractalMoE is implemented as a fractal-like structure, allowing for dynamic depth adaptation based on input complexity. This enables the model to allocate computational resources more efficiently.
+
+2. **Product Key Memory Routing**: We employ an enhanced version of product key memory for efficient routing among millions of experts. This allows the model to scale to an unprecedented number of experts while maintaining computational feasibility.
+
+3. **Hyper-Mixture Architecture**: FractalMoE combines multiple levels of expert mixing, including the fractal structure within experts and high-level mixing between experts. This multi-level mixture approach potentially increases the model's expressiveness and capacity.
+
+4. **Adaptive Computation**: The fractal structure of experts enables adaptive computation depth, potentially reducing computational requirements for simpler inputs while maintaining the ability to dedicate more resources to complex inputs.
+
+5. **Efficient Integration with Transformers**: FractalMoE is designed to seamlessly integrate with transformer architectures, making it suitable for a wide range of language modeling tasks.
+
+## Core Components
+
+1. **FractalExpert**: The basic building block of our model, implementing a fractal-like structure that allows for dynamic depth.
+
+2. **ProductKeyMemory**: An efficient routing mechanism that enables scaling to millions of experts.
+
+3. **FHME (Fractal Hyper-Mixture of Experts)**: The main module that combines fractal experts with product key routing.
+
+4. **FHMETransformerBlock**: An extension of the standard transformer block, replacing the feedforward layer with our FHME module.
+
+5. **FHMELanguageModel**: A complete language model implementation using FractalMoE.
+
+## Potential Applications
+
+- Large-scale language modeling
+- Efficient fine-tuning of massive language models
+- Task-specific adaptation of large pre-trained models
+- Potentially extendable to other domains like computer vision or multimodal learning
+
+## Future Directions
+
+1. **Scaling Studies**: Investigate the performance and efficiency of FractalMoE as we scale to even larger numbers of experts.
+
+2. **Adaptive Routing Strategies**: Explore more sophisticated routing mechanisms that can better utilize the fractal structure of experts.
+
+3. **Hardware-Specific Optimizations**: Develop optimizations tailored to specific hardware architectures to maximize efficiency.
+
+4. **Cross-Domain Applications**: Extend FractalMoE to other domains beyond language modeling.
+
+5. **Theoretical Analysis**: Conduct in-depth theoretical analysis of the model's properties and capabilities.
+
+## Conclusion
+
+FractalMoE represents a significant step forward in scaling Mixture of Experts models. By introducing fractal structures, advanced routing mechanisms, and multi-level mixing, we aim to push the boundaries of what's possible in large-scale machine learning models. This project opens up new avenues for research in efficient, scalable AI systems.
+
+## Conclusion
+[1] Jacobs, R. A., Jordan, M. I., Nowlan, S. J., & Hinton, G. E. (1991). Adaptive mixtures of local experts.
+[2] He, X. O. (2024). Mixture of A Million Experts.
+[3] Lample, G., Sablayrolles, A., Ranzato, M., Denoyer, L., & Jégou, H. (2019). Large Memory Layers with Product Keys.
+[4] Fedus, W., Zoph, B., & Shazeer, N. (2021). Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity.
+[5] Srivastava, R. K., Greff, K., & Schmidhuber, J. (2015). Highway networks.
+[6] Dehghani, M., Gouws, S., Vinyals, O., Uszkoreit, J., & Kaiser, Ł. (2018). Universal transformers.
+[7] Larsson, G., Maire, M., & Shakhnarovich, G. (2016). FractalNet: Ultra-Deep Neural Networks without Residuals.
